@@ -7,4 +7,4 @@ before_install:
     - docker build -t prabhus/docker-react-app -f Dockerfile.dev .
 
 script:
-    - docker run prabhus/docker-react-app npm run test -- --coverage    
+    - docker run -e CI=true prabhus/docker-react-app npm run test -- --coverage    
